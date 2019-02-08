@@ -1,0 +1,16 @@
+Selected rollno:{{selstudent.srollno}}
+<br/>
+Selected name:{{selstudent.sname}}
+<br/>
+Selected batch:{{selstudent.sbatch}}
+<br/>
+Selected dept:{{selstudent.sdept}}
+<br/>
+
+
+<app-student [rollno]="item.rollno"
+[name]="item.name"
+[batch]="item.batch"
+[dept]="item.dept"
+*ngFor="let item of studentdetails"
+(sendstudent)="addstudent($event)"></app-student>
